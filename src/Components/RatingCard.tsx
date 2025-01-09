@@ -6,7 +6,7 @@ const ratingArray:number[] = [1, 2, 3, 4, 5];
 type RatingCardProps = {
   handleRating: (num: number) => void;
   handleSubmit: () => void;
-  rating: number|null ;
+  rating: number ;
 };
 
 const RatingCard: React.FC<RatingCardProps> = ({ handleRating, handleSubmit, rating }) => {
