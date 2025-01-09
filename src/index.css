@@ -1,0 +1,24 @@
+/* styles/global.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .btn-sm {
+    @apply
+     w-12 h-12 rounded-full
+        flex items-center justify-center
+        text-lg font-bold transition-all
+    cursor-pointer  ;
+  }
+  .card{
+    @apply rounded-3xl bg-card-gradient p-8 space-y-6 shadow-lg w-96
+  }
+  .thankYouCard{
+    @apply rounded-3xl bg-card-gradient p-8 flex flex-col items-center space-y-6 shadow-lg w-96
+  }
+  .media-sm{
+    @apply w-[80vw]
+  }
+}
