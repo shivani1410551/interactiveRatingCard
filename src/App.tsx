@@ -3,7 +3,7 @@ import RatingCard from "./Components/RatingCard";
 import ThankYouState from "./Components/ThankYouState";
 
 const App: React.FC = () => {
-  const [rating, setRating] = useState<number >();
+  const [rating, setRating] = useState<number|null>(null);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
   function handleRating(num: number): void {
@@ -19,14 +19,14 @@ const App: React.FC = () => {
   return (
     <div className="bg-verydarkblue text-lightgrey font-overpass h-screen flex items-center justify-center">
       {isSubmitted ? (
-        <ThankYouState rating={rating}
+        <ThankYouState rating={rating??0}
           setIsSubmitted= {setIsSubmitted}
         />
       ) : (
         <RatingCard
           handleRating={handleRating}
           handleSubmit={handleSubmit}
-          rating={rating}
+          rating={rating??0}
         />
       )}
     </div>
