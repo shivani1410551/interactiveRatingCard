@@ -27,8 +27,8 @@ const RatingCard: React.FC<RatingCardProps> = ({ handleRating, handleSubmit, rat
       </div>
       <button
         className="bg-orange-500 w-full rounded-3xl text-darkblue uppercase tracking-wider font-bold py-2 hover:bg-white hover:text-orange-500 transition-colors cursor-pointer
-        onClick={handleSubmit}"
-
+    "
+    onClick={handleSubmit}
       >
         Submit
       </button>
