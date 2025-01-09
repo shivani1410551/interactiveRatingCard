@@ -10,10 +10,10 @@
      w-12 h-12 rounded-full
         flex items-center justify-center
         text-lg font-bold transition-all
-    cursor-pointer  ;
+    cursor-pointer hover:scale-75 ;
   }
   .card{
-    @apply rounded-3xl bg-card-gradient p-8 space-y-6 shadow-lg w-96
+    @apply rounded-3xl bg-card-gradient p-8 space-y-6 shadow-lg w-[26rem]
   }
   .thankYouCard{
     @apply rounded-3xl bg-card-gradient p-8 flex flex-col items-center space-y-6 shadow-lg w-96

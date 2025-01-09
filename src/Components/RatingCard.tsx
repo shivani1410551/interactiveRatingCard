@@ -13,10 +13,10 @@ const RatingCard: React.FC<RatingCardProps> = ({ handleRating, handleSubmit, rat
   return (
     <div className="card sm:w-[80vw] max-w-md bg-gray-800 p-6 rounded-xl space-y-6 text-center shadow-lg">
       <button className="btn-sm bg-gradient-to-r from-gray-700 to-gray-600 p-3 rounded-full">
-        <img src="/images/icon-star.svg" alt="icon star" />
+        <img src="./images/icon-star.svg" alt="icon star" />
       </button>
-      <h1 className="font-bold text-white text-2xl">How did we do?</h1>
-      <p className="text-gray-400 text-sm">
+      <h1 className="font-bold text-white text-3xl text-start">How did we do?</h1>
+      <p className="text-gray-400 text-base text-start">
         Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!
       </p>
@@ -26,9 +26,9 @@ const RatingCard: React.FC<RatingCardProps> = ({ handleRating, handleSubmit, rat
         ))}
       </div>
       <button
-        className="bg-orange-500 w-full rounded-3xl text-darkblue uppercase tracking-wider font-bold py-2 hover:bg-white hover:text-orange-500 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
-        onClick={handleSubmit}
-        disabled={!rating}
+        className="bg-orange-500 w-full rounded-3xl text-darkblue uppercase tracking-wider font-bold py-2 hover:bg-white hover:text-orange-500 transition-colors cursor-pointer
+        onClick={handleSubmit}"
+
       >
         Submit
       </button>

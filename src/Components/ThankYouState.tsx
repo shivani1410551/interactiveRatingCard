@@ -7,7 +7,7 @@ type thankYouCardProps = {
 const ThankYouState:React.FC<thankYouCardProps> = ({rating,setIsSubmitted}) => {
   return (
           <div className="thankYouCard sm:w-[80vw]">
-      <img src="/public/images/illustration-thank-you.svg" alt="illustration thank you" />
+      <img src="./images/illustration-thank-you.svg" alt="illustration thank you" />
       <p className='bg-btn-gradient rounded-3xl px-5 py-2 text-base text-orange-500'>
   You selected {rating} out of 5
 
