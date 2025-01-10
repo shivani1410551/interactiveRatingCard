@@ -1,15 +1,14 @@
 import React from "react";
 import RatingButton from "./RatingButton";
 
-const ratingArray:number[] = [1, 2, 3, 4, 5];
+const ratingArray: number[] = [1, 2, 3, 4, 5];
 
 type RatingCardProps = {
-  handleRating: (num: number) => void;
-  handleSubmit: () => void;
-  rating: number ;
+  dispatch: React.Dispatch<{ type: "SET_RATING" | "SET_SUBMITTED"; payload: number|null|boolean }>;
+  rating: number;
 };
 
-const RatingCard: React.FC<RatingCardProps> = ({ handleRating, handleSubmit, rating }) => {
+const RatingCard: React.FC<RatingCardProps> = ({ dispatch, rating }) => {
   return (
     <div className="card sm:w-[80vw] max-w-md bg-gray-800 p-6 rounded-xl space-y-6 text-center shadow-lg">
       <button className="btn-sm bg-gradient-to-r from-gray-700 to-gray-600 p-3 rounded-full">
@@ -22,13 +21,12 @@ const RatingCard: React.FC<RatingCardProps> = ({ handleRating, handleSubmit, rat
       </p>
       <div className="flex justify-between gap-3">
         {ratingArray.map((num) => (
-          <RatingButton onHandleRating={handleRating} num={num} key={num} rating={rating} />
+          <RatingButton dispatch={dispatch} num={num} key={num} rating={rating} />
         ))}
       </div>
       <button
-        className="bg-orange-500 w-full rounded-3xl text-darkblue uppercase tracking-wider font-bold py-2 hover:bg-white hover:text-orange-500 transition-colors cursor-pointer
-    "
-    onClick={handleSubmit}
+        className="bg-orange-500 w-full rounded-3xl text-darkblue uppercase tracking-wider font-bold py-2 hover:bg-white hover:text-orange-500 transition-colors cursor-pointer"
+        onClick={() => dispatch({ type: "SET_SUBMITTED", payload: true })}
       >
         Submit
       </button>
