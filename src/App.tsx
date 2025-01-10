@@ -1,24 +1,13 @@
 import React, { useReducer } from "react";
 import RatingCard from "./Components/RatingCard";
 import ThankYouState from "./Components/ThankYouState";
+import { Action,State } from "./types/type";
 
 
-// Define the State type
-type State = {
-  rating: number | null;
-  isSubmitted: boolean;
-};
-
-
-// Define the initial state
 const initialState:State = {
   rating: null,
   isSubmitted: false,
 };
-// Define the Action type
-type Action =
-  | { type: "SET_RATING"; payload: number }
-  | { type: "SET_SUBMITTED"; payload: boolean };
 
 // Reducer function
 function reducer(state: State, action: Action): State {

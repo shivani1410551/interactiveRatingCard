@@ -1,4 +1,5 @@
 import React from "react";
+// import { State } from "../types/type";
 
 type ThankYouStateProps = {
   rating: number;

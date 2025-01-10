@@ -1,10 +1,12 @@
 import React from "react";
 import RatingButton from "./RatingButton";
+import { Action } from "../types/type";
+
 
 const ratingArray: number[] = [1, 2, 3, 4, 5];
 
 type RatingCardProps = {
-  dispatch: React.Dispatch<{ type: "SET_RATING" | "SET_SUBMITTED"; payload: number|null|boolean }>;
+  dispatch: React.Dispatch<Action>;
   rating: number;
 };
 
@@ -16,8 +18,8 @@ const RatingCard: React.FC<RatingCardProps> = ({ dispatch, rating }) => {
       </button>
       <h1 className="font-bold text-white text-3xl text-start">How did we do?</h1>
       <p className="text-gray-400 text-base text-start">
-        Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!
+        Please let us know how we did with your support request. All feedback
+        is appreciated to help us improve our offering!
       </p>
       <div className="flex justify-between gap-3">
         {ratingArray.map((num) => (

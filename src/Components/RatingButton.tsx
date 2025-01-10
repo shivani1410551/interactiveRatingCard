@@ -1,4 +1,6 @@
 import React from "react";
+// import { State } from "../types/type";
+
 
 type RatingButtonProps = {
   num: number;
